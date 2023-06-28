@@ -17,7 +17,7 @@ struct PageIndicator: View {
             
             HStack(alignment: .center, spacing: 10) {
                 Button(action: {
-                        self.isShowing = false
+                        self.isShowing = true
                     }) {
                         Text("Pule")
                             .fontWeight(.medium)
@@ -59,7 +59,7 @@ struct PageIndicator: View {
                             if self.indicatorPage < 2 {
                                 self.indicatorPage += 1
                             } else if self.indicatorPage == 2 {
-                                self.isShowing = false
+                                self.isShowing = true
                             }
                         }
                     }) {

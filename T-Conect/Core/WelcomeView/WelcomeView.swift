@@ -53,27 +53,30 @@ struct WelcomeView: View {
 struct FeaturedItem: View {
     var body: some View {
         VStack {
-                Image("image")
-                    .resizable()
-                    .scaledToFill()
-                    .background(.blue)
+            
+            Image("image")
+                .resizable()
+                .scaledToFill()
+                .background(.blue)
             
             VStack(alignment: .leading) {
                 Spacer()
                 
-                Text("Bem-Vindo ao T-Conect")
+                Text("Bienvenido a Insurance")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.bottom, 5)
-                Text("A maior comunidade de compras  e viagens do mundo.")
+                Text("Personalice su seguro y contrate en pocos minutos")
                     .font(.headline)
                     .foregroundColor(Color(.systemGray4))
+                
+                Spacer()
             }
-            .padding(.bottom, 80)
+            .padding(.horizontal)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBlue))
+        .background(Color("purplePrincipal"))
         .ignoresSafeArea()
     }
 }
@@ -87,23 +90,26 @@ struct FeaturedItem2: View {
                 .scaledToFill()
                 .background(.blue)
         
-        VStack(alignment: .leading) {
-            
-            Spacer()
-            
-            Text("Loja do exterior")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(.bottom, 5)
-            Text("De jogos a eletronicos, accese qualquer produto do exterior, entregue por viajantes.")
-                .font(.headline)
-                .foregroundColor(Color(.systemGray4))
+            VStack(alignment: .leading) {
+                
+                Spacer()
+                
+                Text("Seguro de vehiculo")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.bottom, 5)
+                Text("Personalice el seguro a su necesidad, agregue o quite servicios que desee.")
+                    .font(.headline)
+                    .foregroundColor(Color(.systemGray4))
+                
+                Spacer()
+                
+            }
+            .padding(.horizontal)
         }
-        .padding(.bottom, 80)
-    }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBlue))
+        .background(Color("purplePrincipal"))
         .ignoresSafeArea()
     }
 }
@@ -117,20 +123,25 @@ struct FeaturedItem3: View {
                 .background(.blue)
             
             VStack(alignment: .leading) {
+                
                 Spacer()
-                Text("Ganhe Dinhheriro Viajando")
+                
+                Text("Seguro Residencial")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.bottom, 5)
-                Text("Ganhe dinheiro toda vez que voce viajar, entregando produtos para os moradores ao longo do caminho.")
+                Text("Tu casa es tu camino. Tu seguro residencial online tambien puede ser")
                     .font(.headline)
                     .foregroundColor(Color(.systemGray4))
+                
+                Spacer()
+                
             }
-            .padding(.bottom, 80)
+            .padding(.horizontal)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBlue))
+        .background(Color("purplePrincipal"))
         .ignoresSafeArea()
     }
 }

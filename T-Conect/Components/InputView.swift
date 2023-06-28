@@ -16,20 +16,22 @@ struct InputView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
-                .foregroundColor(Color(.darkGray))
+                .foregroundColor(Color(.gray))
                 .fontWeight(.semibold)
                 .font(.footnote)
             
                 if isSecureField {
                     TextField(placeholder, text: $text)
+                        .foregroundColor(Color.white)
                         .font(.system(size: 14))
                 } else {
                     SecureField(placeholder, text: $text)
+                        .foregroundColor(Color.white)
                         .font(.system(size: 14))
                 }
             
             Divider()
-            
+                .background(Color.white)
         }
     }
 }

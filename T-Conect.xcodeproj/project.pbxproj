@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472069092A4BB24E006C7471 /* AccionarServicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472069082A4BB24E006C7471 /* AccionarServicio.swift */; };
+		4720690B2A4BB350006C7471 /* CambioTarjetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4720690A2A4BB350006C7471 /* CambioTarjetaView.swift */; };
+		4720690D2A4BB366006C7471 /* ConsultaPagos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4720690C2A4BB366006C7471 /* ConsultaPagos.swift */; };
+		4720690F2A4BB37D006C7471 /* AlterarContrato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4720690E2A4BB37D006C7471 /* AlterarContrato.swift */; };
+		472069112A4BB3D8006C7471 /* ChatBootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472069102A4BB3D8006C7471 /* ChatBootView.swift */; };
+		472069132A4BB3FC006C7471 /* CambioClaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472069122A4BB3F9006C7471 /* CambioClaveView.swift */; };
+		472069152A4BB48D006C7471 /* CentralAyudaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472069142A4BB48D006C7471 /* CentralAyudaView.swift */; };
 		473857102A3B83E500E0A63E /* GlobeTabViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738570F2A3B83E500E0A63E /* GlobeTabViewHome.swift */; };
 		473857122A3B887E00E0A63E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473857112A3B887E00E0A63E /* ImageCache.swift */; };
 		473857142A3B8EDD00E0A63E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473857132A3B8EDD00E0A63E /* ProfileView.swift */; };
@@ -24,6 +31,8 @@
 		476269C32A2A53420067EA99 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476269C22A2A53410067EA99 /* LoginView.swift */; };
 		476269C62A2A5FE70067EA99 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476269C52A2A5FE70067EA99 /* InputView.swift */; };
 		477878502A38F5CD00571FD4 /* ItemsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4778784F2A38F5CC00571FD4 /* ItemsHome.swift */; };
+		47C27C052A4B5704001848B7 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C27C042A4B5704001848B7 /* CustomNavBarView.swift */; };
+		47C27C082A4B5D58001848B7 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C27C072A4B5D58001848B7 /* CustomNavBarContainerView.swift */; };
 		47CA17822A26B2A600BEFF14 /* HomeIntroduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA17812A26B2A500BEFF14 /* HomeIntroduction.swift */; };
 		47D0CBD22A27E874004F2B55 /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0CBD12A27E874004F2B55 /* PageIndicator.swift */; };
 		47D0CBD72A27EE37004F2B55 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0CBD62A27EE37004F2B55 /* WelcomeView.swift */; };
@@ -33,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472069082A4BB24E006C7471 /* AccionarServicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccionarServicio.swift; sourceTree = "<group>"; };
+		4720690A2A4BB350006C7471 /* CambioTarjetaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambioTarjetaView.swift; sourceTree = "<group>"; };
+		4720690C2A4BB366006C7471 /* ConsultaPagos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaPagos.swift; sourceTree = "<group>"; };
+		4720690E2A4BB37D006C7471 /* AlterarContrato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterarContrato.swift; sourceTree = "<group>"; };
+		472069102A4BB3D8006C7471 /* ChatBootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBootView.swift; sourceTree = "<group>"; };
+		472069122A4BB3F9006C7471 /* CambioClaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambioClaveView.swift; sourceTree = "<group>"; };
+		472069142A4BB48D006C7471 /* CentralAyudaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralAyudaView.swift; sourceTree = "<group>"; };
 		4738570F2A3B83E500E0A63E /* GlobeTabViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeTabViewHome.swift; sourceTree = "<group>"; };
 		473857112A3B887E00E0A63E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		473857132A3B8EDD00E0A63E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -46,6 +62,8 @@
 		476269C22A2A53410067EA99 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		476269C52A2A5FE70067EA99 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		4778784F2A38F5CC00571FD4 /* ItemsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsHome.swift; sourceTree = "<group>"; };
+		47C27C042A4B5704001848B7 /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
+		47C27C072A4B5D58001848B7 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
 		47CA17812A26B2A500BEFF14 /* HomeIntroduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroduction.swift; sourceTree = "<group>"; };
 		47D0CBD12A27E874004F2B55 /* PageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicator.swift; sourceTree = "<group>"; };
 		47D0CBD62A27EE37004F2B55 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -70,6 +88,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		472069072A4BB21E006C7471 /* ActionsHomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				472069082A4BB24E006C7471 /* AccionarServicio.swift */,
+				4720690A2A4BB350006C7471 /* CambioTarjetaView.swift */,
+				4720690C2A4BB366006C7471 /* ConsultaPagos.swift */,
+				4720690E2A4BB37D006C7471 /* AlterarContrato.swift */,
+				472069102A4BB3D8006C7471 /* ChatBootView.swift */,
+				472069122A4BB3F9006C7471 /* CambioClaveView.swift */,
+				472069142A4BB48D006C7471 /* CentralAyudaView.swift */,
+			);
+			path = ActionsHomeViews;
+			sourceTree = "<group>";
+		};
 		4738570E2A3B83B500E0A63E /* TabViewHome */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +155,21 @@
 		476269C42A2A5FD10067EA99 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				47C27C062A4B5CFA001848B7 /* CustomNavBar */,
 				476269C52A2A5FE70067EA99 /* InputView.swift */,
 				47D0CBD12A27E874004F2B55 /* PageIndicator.swift */,
 				4778784F2A38F5CC00571FD4 /* ItemsHome.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		47C27C062A4B5CFA001848B7 /* CustomNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				47C27C042A4B5704001848B7 /* CustomNavBarView.swift */,
+				47C27C072A4B5D58001848B7 /* CustomNavBarContainerView.swift */,
+			);
+			path = CustomNavBar;
 			sourceTree = "<group>";
 		};
 		47CA177A2A26B13400BEFF14 /* App */ = {
@@ -141,6 +183,7 @@
 		47CA177B2A26B14700BEFF14 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				472069072A4BB21E006C7471 /* ActionsHomeViews */,
 				4738570E2A3B83B500E0A63E /* TabViewHome */,
 				476269C12A2A53150067EA99 /* Root */,
 				476269C02A2A530C0067EA99 /* Profile */,
@@ -325,15 +368,24 @@
 				477878502A38F5CD00571FD4 /* ItemsHome.swift in Sources */,
 				47CA17822A26B2A600BEFF14 /* HomeIntroduction.swift in Sources */,
 				47D0CBD22A27E874004F2B55 /* PageIndicator.swift in Sources */,
+				47C27C082A4B5D58001848B7 /* CustomNavBarContainerView.swift in Sources */,
 				47E43E242A26A631003DA621 /* T_ConectApp.swift in Sources */,
+				4720690B2A4BB350006C7471 /* CambioTarjetaView.swift in Sources */,
+				4720690D2A4BB366006C7471 /* ConsultaPagos.swift in Sources */,
 				47451DDB2A2CF46B004C767A /* RegistrationView.swift in Sources */,
 				47451DDD2A2D024E004C767A /* User.swift in Sources */,
 				473857142A3B8EDD00E0A63E /* ProfileView.swift in Sources */,
+				472069112A4BB3D8006C7471 /* ChatBootView.swift in Sources */,
+				472069092A4BB24E006C7471 /* AccionarServicio.swift in Sources */,
 				473857102A3B83E500E0A63E /* GlobeTabViewHome.swift in Sources */,
 				476269C62A2A5FE70067EA99 /* InputView.swift in Sources */,
+				4720690F2A4BB37D006C7471 /* AlterarContrato.swift in Sources */,
+				472069132A4BB3FC006C7471 /* CambioClaveView.swift in Sources */,
 				47451DF02A2D9D16004C767A /* HomeInteractionView.swift in Sources */,
+				47C27C052A4B5704001848B7 /* CustomNavBarView.swift in Sources */,
 				476269C32A2A53420067EA99 /* LoginView.swift in Sources */,
 				47D0CBD72A27EE37004F2B55 /* WelcomeView.swift in Sources */,
+				472069152A4BB48D006C7471 /* CentralAyudaView.swift in Sources */,
 				473A7F322A37784A002CFA12 /* ForgotPasswordView.swift in Sources */,
 				47451DEC2A2D4068004C767A /* AuthViewModel.swift in Sources */,
 			);

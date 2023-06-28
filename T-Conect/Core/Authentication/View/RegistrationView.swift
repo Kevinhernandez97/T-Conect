@@ -20,9 +20,9 @@ struct RegistrationView: View {
     var body: some View {
         VStack {
             Spiral()
-                .stroke(Color(.systemBlue), lineWidth: 4)
+                .stroke(Color(.white), lineWidth: 4)
                 .frame(width: 100, height: 100)
-                .padding(.top, 20)
+                .padding(.top, 50)
             
             VStack(spacing: 24) {
                 InputView(text: $email, title: "Email Address", placeholder: "example@hotmail.com", isSecureField: true)
@@ -62,10 +62,10 @@ struct RegistrationView: View {
                     Image(systemName: "arrow.right")
                 }
                 .frame(width: UIScreen.main.bounds.width - 32, height: 48)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 
             }
-            .background(Color(.systemBlue))
+            .background(Color(red: 255/255.0, green: 166/255.0, blue: 47/255.0))
             .disabled(!formIsValid)
             .opacity(formIsValid ? 1.0 : 0.5)
             .cornerRadius(10)
@@ -81,10 +81,13 @@ struct RegistrationView: View {
                     Text("Sign in")
                         .fontWeight(.bold)
                 }
+                .foregroundColor(.white)
                 .font(.system(size: 14))
                 .padding(.bottom, 20)
             }
         }
+        .background(Color("purplePrincipal"))
+        .ignoresSafeArea(.all)
         .navigationBarHidden(true)
     }
 }

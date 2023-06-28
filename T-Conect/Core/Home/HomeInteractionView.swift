@@ -10,19 +10,20 @@ import SwiftUI
 struct HomeInteractionView: View {
     var body: some View {
         TabView {
-            NavigationView {
-                withAnimation {
-                    GlobeTabViewHome()
-                }
-            }
+            
+            GlobeTabViewHome()
+            
             .tabItem {
                 Image(systemName: "globe")
                 Text("Descubra")
             }
             
-            NavigationView {
-                Text("hola")
+            
+            NavigationView{
+                
             }
+            .navigationBarHidden(true)
+            
             .tabItem {
                 Image(systemName: "cart.fill")
                 Text("Pedidos")

@@ -7,157 +7,103 @@
 
 import SwiftUI
 
+enum OptionsMenu {
+    case accionaServicio
+    case cambiarTatjeta
+    case consultarPagos
+    case alterarContrato
+    case hablarConInsurane
+    case cambioDeClave
+    case centralDeAyuda
+
+    var destinationView: AnyView {
+        switch self {
+        case .accionaServicio:
+            return AnyView(Text("Vista de Accionar servicio"))
+        case .cambiarTatjeta:
+            return AnyView(Text("Vista de Cambiar tarjeta"))
+        case .consultarPagos:
+            return AnyView(Text("Vista de Consultar pagos"))
+        case .alterarContrato:
+            return AnyView(Text("Vista de Alterar contrato"))
+        case .hablarConInsurane:
+            return AnyView(Text("Vista de Hablar con Insurane"))
+        case .cambioDeClave:
+            return AnyView(Text("Vista de Cambio de clave"))
+        case .centralDeAyuda:
+            return AnyView(Text("Vista de Central de ayuda"))
+        }
+    }
+}
+
+
 struct ItemsHome: View {
     @State var titleGroup: String
     @State var isShowing = false
     
     let imagesData = [
-        ImageData(url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch_AV1?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1671474921740", titleCompany: "APPLE", titleProduct: "iPhone 14 pro max - 256GB", price: "8.900 BRL"),
-        ImageData(url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO_GEO_BR?wid=700&hei=700&trim=1%2C0&fmt=p-jpg&qlt=95&.v=1683224241054", titleCompany: "APPLE", titleProduct: "Pulseira loop Alpina laranja", price: "10.900 BRL"),
-        ImageData(url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-gallery1-202206?wid=2000&hei=1537&fmt=jpeg&qlt=95&.v=1664558461719", titleCompany: "APPLE", titleProduct: "MacBook Pro de 13 polegadas", price: "12.299 BRL"),
-        ImageData(url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-model-select-gallery-1-202212?wid=2560&hei=1440&fmt=p-jpg&qlt=95&.v=1667594167948", titleCompany: "APPLE", titleProduct: "iPad Pro", price: "11.499 BRL"),
+        ImageData(imageString: "exclamationmark.circle", title: "Accionar servicio", option: .accionaServicio),
+        ImageData(imageString: "creditcard.fill", title: "Cambiar tarjeta", option: .cambiarTatjeta),
+        ImageData(imageString: "calendar", title: "Consultar pagos", option: .consultarPagos),
+        ImageData(imageString: "doc.fill", title: "Alterar contrato", option: .alterarContrato),
+        ImageData(imageString: "bubble.right.fill", title: "Hablar con Insurane", option: .hablarConInsurane),
+        ImageData(imageString: "lock", title: "Cambio de clave", option: .cambioDeClave),
+        ImageData(imageString: "questionmark.circle", title: "Central de ayuda", option: .centralDeAyuda)
     ]
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Text(titleGroup)
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
-                Image(systemName: "speaker.fill")
-                    .foregroundColor(.yellow)
-                
-                Spacer()
-                
-                NavigationLink {
-                    ScrollView(.vertical) {
-                            ForEach(imagesData) { imageData in
-                                if let imageUrl = URL(string: imageData.url) {
-                                    AsyncImage(url: imageUrl) { image in
-                                        Section {
-                                            HStack {
-                                                VStack(alignment: .leading) {
-                                                    image
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
-                                                        .frame(width: 70, height: 70)
-                                                        .cornerRadius(10)
-                                                }
-                                                .padding()
-                                                
-                                                VStack(alignment: .leading) {
-                                                    Text(imageData.titleCompany)
-                                                        .font(.system(size: 15))
-                                                        .fontWeight(.semibold)
-                                                        .foregroundColor(.gray)
-                                                    
-                                                    Text(imageData.titleProduct)
-                                                        .font(.system(size: 20))
-                                                        .foregroundColor(.black)
-                                                }
-                                                 
-                                                VStack {
-                                                    Text("precio del producto")
-                                                        .font(.subheadline)
-                                                        .foregroundColor(.gray)
-                                                        .padding(.top)
-                                                    
-                                                    Text(imageData.price)
-                                                        .font(.title2)
-                                                        .fontWeight(.semibold)
-                                                }
-                                            }
-                                        }
-                                        .frame(maxWidth: .infinity, maxHeight: 170)
-                                        .background(Color(.systemGray6).opacity(0.8))
-                                        .cornerRadius(10)
-                                        .padding()
-                                        
-                                    }  placeholder: {
-                                        ProgressView()
-                                    }
-                                }
-                            }
-                            .navigationBarTitle(titleGroup)
-                        }
-                    .background(Color(red: 0.4, green: 0.3, blue: 0.7).opacity(0.2))
-                } label : {
-                    Text("Ver tudo")
-                        .font(.subheadline)
-                        .foregroundColor(Color(.systemGray))
-                        .padding(.trailing, 8)
-                }
             }
-            .padding(.bottom, 15)
+            .padding(.bottom, 8)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 20) {
+                LazyHStack(spacing: 8) {
                     ForEach(imagesData) { imageData in
-                        loadImageFromUrl(imageData: imageData)
+                        NavigationLink {
+                            imageData.option.destinationView
+                        } label: {
+                            VStack {
+                                Image(systemName: "\(imageData.imageString)")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 45)
+                                    .foregroundColor(Color("purplePrincipal"))
+                                    .padding(.bottom, 8)
+                                
+                                Text(imageData.title)
+                                    .font(.system(size: 15))
+                                    .foregroundColor(.gray)
+                                    .lineLimit(nil)
+                                    .multilineTextAlignment(.center)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            .padding(8)
+                            .frame(maxWidth: 110, maxHeight: .infinity)
+                            .background(.white)
+                            .cornerRadius(11)
+                            .shadow(color: Color.black.opacity(0.2), radius: 3)
+                        }
                     }
                 }
+                .padding(.vertical, 10)
+                .padding(.horizontal, 10)
             }
-        }
-        .padding(.bottom, 20)
-        .onAppear {
-            let imageURLs = imagesData.compactMap { URL(string: $0.url) }
-            ImageCache.shared.preloadImages(withURLs: imageURLs)
-        }
-    }
-    
-    @ViewBuilder
-    func loadImageFromUrl(imageData: ImageData) -> some View {
-        if let imageUrl = URL(string: imageData.url) {
-            AsyncImage(url: imageUrl) { image in
-                VStack {
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 130, height: 130)
-             
-                            .cornerRadius(10)
-                    
-                    VStack(alignment: .leading) {
-                        Text(imageData.titleCompany)
-                            .font(.system(size: 15))
-                            .fontWeight(.semibold)
-                            .foregroundColor(.gray)
-                        
-                        Text(imageData.titleProduct)
-                            .font(.system(size: 20))
-                            .foregroundColor(.black)
-                        
-                        Text("precio del producto")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .padding(.top)
-                        
-                        Text(imageData.price)
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                    }
-                    .padding(.vertical, 8)
-                }
-                .padding(5)
-                .frame(width: 170, height: 330)
-                .background(Color(.systemGray6).opacity(0.8))
-                .cornerRadius(10)
 
-                
-            } placeholder: {
-                ProgressView()
-            }
         }
+        .padding(.top, 10)
     }
 }
 
 struct ImageData: Identifiable {
     let id = UUID()
-    let url: String
-    let titleCompany: String
-    let titleProduct: String
-    let price: String
+    let imageString: String
+    let title: String
+    let option: OptionsMenu
 }
 
 struct ItemsHome_Previews: PreviewProvider {

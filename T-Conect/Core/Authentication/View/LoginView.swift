@@ -18,12 +18,12 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 // Logo
-    
-                    Spiral()
-                        .stroke(Color(.systemBlue), lineWidth: 4)
-                        .frame(width: 100, height: 100)
-                        .padding(.top, 20)
-               
+                
+                Spiral()
+                    .stroke(Color(.white), lineWidth: 4)
+                    .frame(width: 100, height: 100)
+                    .padding(.top, 50)
+                
                 
                 // form fields
                 VStack(spacing: 15) {
@@ -44,6 +44,7 @@ struct LoginView: View {
                         }
                     }
                 }
+          
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -60,7 +61,7 @@ struct LoginView: View {
                             Text("Forgot Password?")
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color(.systemBlue))
+                                .foregroundColor(.white)
                         }
                     }
                 }
@@ -79,15 +80,15 @@ struct LoginView: View {
                         Image(systemName: "arrow.right")
                     }
                     .frame(width: UIScreen.main.bounds.width - 32, height: 48)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     
                 }
-                .background(Color(.systemBlue))
+                .background(Color(red: 255/255.0, green: 166/255.0, blue: 47/255.0))
                 .disabled(!formIsValid)
                 .opacity(formIsValid ? 1.0 : 0.5)
                 .cornerRadius(10)
                 .opacity(0.8)
-
+                
                 
                 Spacer()
                 
@@ -102,10 +103,13 @@ struct LoginView: View {
                         Text("Sign up")
                             .fontWeight(.bold)
                     }
+                    .foregroundColor(.white)
                     .font(.system(size: 14))
                     .padding(.bottom, 20)
                 }
             }
+            .background(Color("purplePrincipal"))
+            .ignoresSafeArea(.all)
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarHidden(true)
         }

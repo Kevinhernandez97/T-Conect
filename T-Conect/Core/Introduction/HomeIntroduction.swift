@@ -9,14 +9,14 @@ import SwiftUI
 
 struct HomeIntroduction: View {
     @State private var currentPage: CGFloat = 0
-    @State private var isShowing = true
+    @State private var isShowing = false
     
     var body: some View {
         ZStack {
             if isShowing {
-                WelcomeView(currentPage: $currentPage, isShowing: $isShowing)
-            } else {
                 LoginView()
+            } else {
+                WelcomeView(currentPage: $currentPage, isShowing: $isShowing)
             }
         }
     }
