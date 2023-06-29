@@ -11,7 +11,7 @@ struct GlobeTabViewHome: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-        if let user = viewModel.currentUser {
+//        if let user = viewModel.currentUser {
             NavigationView {
                 CustomNavBarContainerView {
                     ZStack {
@@ -25,7 +25,7 @@ struct GlobeTabViewHome: View {
                 }
                 .navigationBarHidden(true)
             }
-        }
+//        }
     }
 }
 
