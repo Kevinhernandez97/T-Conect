@@ -8,35 +8,39 @@
 import SwiftUI
 
 struct HomeInteractionView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
+    
     var body: some View {
-        TabView {
-            
-            GlobeTabViewHome()
-            .tabItem {
-                Image(systemName: "house")
-                Text("Inicio")
+            TabView {
+                GlobeTabViewHome()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Inicio")
+                }
+                
+                
+                CotizacionTabViewHome()
+                .tabItem {
+                    Image(systemName: "plus.circle")
+                    Text("Cotizar")
+                }
+                
+                HistoryTabViewHome()
+                .tabItem {
+                    Image(systemName: "message")
+                    Text("Historial")
+                }
+                
+                ProfileView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Mi cuena")
+                }
             }
-            
-            
-            CotizacionTabViewHome()
-            .tabItem {
-                Image(systemName: "plus.circle")
-                Text("Cotizar")
-            }
-            
-            HistoryTabViewHome()
-            .tabItem {
-                Image(systemName: "message")
-                Text("Historial")
-            }
-            
-            ProfileView()
-            .tabItem {
-                Image(systemName: "person.fill")
-                Text("Mi cuena")
-            }
-        }
-        .accentColor(.purple)
+            .accentColor(.purple)
+        
     }
 }
 

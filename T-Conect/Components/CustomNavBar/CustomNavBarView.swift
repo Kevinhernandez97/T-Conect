@@ -20,7 +20,8 @@ struct CustomNavBarView: View {
                 
             }, label: {
                 Image(systemName: "questionmark.circle")
-                    .foregroundColor(Color.gray)
+                    .font(.system(size: 25))
+                    .foregroundColor(Color.white)
             })
         
         }
