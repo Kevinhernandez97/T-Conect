@@ -17,9 +17,15 @@ struct GlobeTabViewHome: View {
                     ZStack {
                         Color("blancoPrincipal").ignoresSafeArea()
                         ScrollView(.vertical) {
-                            VStack {
+                            VStack(alignment: .leading, spacing: 20) {
                                 ItemsHome(titleGroup: "Acciones")
+                                
+                                SegurosView()
+                                
+                                CobturasView()
+                               
                             }
+                            .padding(.horizontal, 8)
                         }
                     }
                 }

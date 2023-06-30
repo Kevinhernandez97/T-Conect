@@ -12,37 +12,28 @@ struct HomeInteractionView: View {
         TabView {
             
             GlobeTabViewHome()
-            
             .tabItem {
-                Image(systemName: "globe")
-                Text("Descubra")
+                Image(systemName: "house")
+                Text("Inicio")
             }
             
             
-            NavigationView{
-                
-            }
-            .navigationBarHidden(true)
-            
+            CotizacionTabViewHome()
             .tabItem {
-                Image(systemName: "cart.fill")
-                Text("Pedidos")
+                Image(systemName: "plus.circle")
+                Text("Cotizar")
             }
             
-            NavigationView {
-                Text("hola")
-            }
+            HistoryTabViewHome()
             .tabItem {
-                Image(systemName: "airplane")
-                Text("Viagens")
+                Image(systemName: "message")
+                Text("Historial")
             }
             
-            NavigationView {
-                Text("hola")
-            }
+            ProfileView()
             .tabItem {
-                Image(systemName: "message.fill")
-                Text("Caixa de entrada")
+                Image(systemName: "person.fill")
+                Text("Mi cuena")
             }
         }
         .accentColor(.purple)
