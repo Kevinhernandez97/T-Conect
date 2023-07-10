@@ -15,7 +15,7 @@ struct GlobeTabViewHome: View {
             NavigationView {
                 CustomNavBarContainerView {
                     ZStack {
-                        Color("blancoPrincipal").ignoresSafeArea()
+//                        Color("blancoPrincipal").ignoresSafeArea()
                         ScrollView(.vertical) {
                             VStack(alignment: .leading, spacing: 20) {
                                 ItemsHome(titleGroup: "Acciones")
@@ -32,18 +32,6 @@ struct GlobeTabViewHome: View {
                 .navigationBarHidden(true)
             }
 //        }
-    }
-}
-
-extension GlobeTabViewHome {
-    private var defaultNavView: some View {
-        NavigationView {
-            ZStack {
-                Color.gray.ignoresSafeArea()
-                Text("Hola")
-                    .foregroundColor(.black)
-            }
-        }
     }
 }
 

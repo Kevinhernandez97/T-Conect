@@ -44,6 +44,8 @@
 		47E43E242A26A631003DA621 /* T_ConectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E43E232A26A631003DA621 /* T_ConectApp.swift */; };
 		47E43E282A26A636003DA621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E43E272A26A636003DA621 /* Assets.xcassets */; };
 		47E43E2B2A26A636003DA621 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E43E2A2A26A636003DA621 /* Preview Assets.xcassets */; };
+		47FB5DE42A508F7C00BC5751 /* NavBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB5DE32A508F7C00BC5751 /* NavBarTitleView.swift */; };
+		47FB5DE62A5093CC00BC5751 /* NavBarTitleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB5DE52A5093CB00BC5751 /* NavBarTitleContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		47E43E232A26A631003DA621 /* T_ConectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T_ConectApp.swift; sourceTree = "<group>"; };
 		47E43E272A26A636003DA621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47E43E2A2A26A636003DA621 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		47FB5DE32A508F7C00BC5751 /* NavBarTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarTitleView.swift; sourceTree = "<group>"; };
+		47FB5DE52A5093CB00BC5751 /* NavBarTitleContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarTitleContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,10 +172,10 @@
 		476269C42A2A5FD10067EA99 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				47FB5DE22A508F3C00BC5751 /* NavBarPrincipal */,
 				47C27C062A4B5CFA001848B7 /* CustomNavBar */,
 				476269C52A2A5FE70067EA99 /* InputView.swift */,
 				47D0CBD12A27E874004F2B55 /* PageIndicator.swift */,
-				4778784F2A38F5CC00571FD4 /* ItemsHome.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -215,6 +219,7 @@
 		4798E0762A4E47080092A88C /* ActionsHomeView */ = {
 			isa = PBXGroup;
 			children = (
+				4778784F2A38F5CC00571FD4 /* ItemsHome.swift */,
 				472069072A4BB21E006C7471 /* ActionsButtonsViews */,
 			);
 			path = ActionsHomeView;
@@ -362,6 +367,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		47FB5DE22A508F3C00BC5751 /* NavBarPrincipal */ = {
+			isa = PBXGroup;
+			children = (
+				47FB5DE32A508F7C00BC5751 /* NavBarTitleView.swift */,
+				47FB5DE52A5093CB00BC5751 /* NavBarTitleContainerView.swift */,
+			);
+			path = NavBarPrincipal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,10 +470,12 @@
 				47451DDD2A2D024E004C767A /* User.swift in Sources */,
 				473857142A3B8EDD00E0A63E /* ProfileView.swift in Sources */,
 				472069112A4BB3D8006C7471 /* ChatBootView.swift in Sources */,
+				47FB5DE42A508F7C00BC5751 /* NavBarTitleView.swift in Sources */,
 				472069092A4BB24E006C7471 /* AccionarServicio.swift in Sources */,
 				473857102A3B83E500E0A63E /* GlobeTabViewHome.swift in Sources */,
 				476269C62A2A5FE70067EA99 /* InputView.swift in Sources */,
 				4720690F2A4BB37D006C7471 /* AlterarContrato.swift in Sources */,
+				47FB5DE62A5093CC00BC5751 /* NavBarTitleContainerView.swift in Sources */,
 				472069132A4BB3FC006C7471 /* CambioClaveView.swift in Sources */,
 				47451DF02A2D9D16004C767A /* HomeInteractionView.swift in Sources */,
 				47C27C052A4B5704001848B7 /* CustomNavBarView.swift in Sources */,

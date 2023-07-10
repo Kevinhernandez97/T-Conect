@@ -19,19 +19,19 @@ enum OptionsMenu {
     var destinationView: AnyView {
         switch self {
         case .accionaServicio:
-            return AnyView(Text("Vista de Accionar servicio"))
+            return AnyView(AccionarServicio())
         case .cambiarTatjeta:
-            return AnyView(Text("Vista de Cambiar tarjeta"))
+            return AnyView(CambioTarjetaView())
         case .consultarPagos:
-            return AnyView(Text("Vista de Consultar pagos"))
+            return AnyView(ConsultaPagos())
         case .alterarContrato:
-            return AnyView(Text("Vista de Alterar contrato"))
+            return AnyView(AlterarContrato())
         case .hablarConInsurane:
-            return AnyView(Text("Vista de Hablar con Insurane"))
+            return AnyView(ChatBootView())
         case .cambioDeClave:
-            return AnyView(Text("Vista de Cambio de clave"))
+            return AnyView(CambioClaveView())
         case .centralDeAyuda:
-            return AnyView(Text("Vista de Central de ayuda"))
+            return AnyView(CentralAyudaView())
         }
     }
 }
@@ -86,14 +86,14 @@ struct ItemsHome: View {
                             .frame(maxWidth: 110, maxHeight: .infinity)
                             .background(.white)
                             .cornerRadius(11)
-                            .shadow(color: Color.black.opacity(0.2), radius: 3)
+                            .shadow(color: Color.black.opacity(0.2), radius: 5)
                         }
+                        .navigationBarHidden(true)
                     }
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal, 10)
             }
-
         }
         .padding(.top, 10)
     }

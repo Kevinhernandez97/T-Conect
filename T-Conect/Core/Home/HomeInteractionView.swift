@@ -13,34 +13,33 @@ struct HomeInteractionView: View {
     }
     
     var body: some View {
-            TabView {
-                GlobeTabViewHome()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Inicio")
-                }
-                
-                
-                CotizacionTabViewHome()
-                .tabItem {
-                    Image(systemName: "plus.circle")
-                    Text("Cotizar")
-                }
-                
-                HistoryTabViewHome()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Historial")
-                }
-                
-                ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Mi cuena")
-                }
+        TabView {
+            GlobeTabViewHome()
+            .tabItem {
+                Image(systemName: "house")
+                Text("Inicio")
             }
-            .accentColor(.purple)
-        
+            
+            CotizacionTabViewHome()
+            .tabItem {
+                Image(systemName: "plus.circle")
+                Text("Cotizar")
+            }
+            .navigationBarHidden(true)
+            
+            HistoryTabViewHome()
+            .tabItem {
+                Image(systemName: "message")
+                Text("Historial")
+            }
+            
+            ProfileView()
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Mi cuena")
+            }
+        }
+        .accentColor(.purple)
     }
 }
 

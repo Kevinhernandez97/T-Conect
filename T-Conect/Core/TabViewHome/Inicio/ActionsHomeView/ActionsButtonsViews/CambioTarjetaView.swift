@@ -9,7 +9,12 @@ import SwiftUI
 
 struct CambioTarjetaView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavBarTitleContainerView(content: {
+            ScrollView {
+                Text("hola")
+            }
+        }, navBarData: NavBarTitleContainerView.NavBarData(title: "Cambiar metodo de pago"))
+            .navigationBarHidden(true)
     }
 }
 

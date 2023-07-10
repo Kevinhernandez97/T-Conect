@@ -30,7 +30,7 @@ struct CustomNavBarView: View {
         .background(
             Color("purplePrincipal").ignoresSafeArea(edges: .top)
         )
-        .shadow(color: Color.black.opacity(0.3), radius: 10)
+        .shadow(color: Color.black.opacity(0.7), radius: 10)
     }
 }
 

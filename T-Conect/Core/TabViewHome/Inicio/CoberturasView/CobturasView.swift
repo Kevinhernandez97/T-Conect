@@ -7,7 +7,57 @@
 
 import SwiftUI
 
+class ServiceData: ObservableObject {
+    struct ServiceApp: Identifiable {
+        let id = UUID()
+        let imageName: String
+        let title: String
+        let option: OptionServices
+    }
+    
+    let servicesApp = [
+        ServiceApp(imageName: "car.fill", title: "Servicio de grua", option: .servicioGrua),
+        ServiceApp(imageName: "bolt.car", title: "AutoSocorro", option: .autoSocorro),
+        ServiceApp(imageName: "car.side", title: "Reparaciones completas", option: .reparacionesCompletas),
+        ServiceApp(imageName: "fuelpump.fill", title: "Tanque vacio", option: .tanqueVacio),
+        ServiceApp(imageName: "car.side", title: "Cambio de llantas", option: .cambioLlantas),
+        ServiceApp(imageName: "steeringwheel.and.key", title: "Cerrajero automotivo", option: .cerrajeroAutomotriz),
+        ServiceApp(imageName: "car.side.front.open", title: "Repracaion latoneria", option: .reparacionLatoneria)
+    ]
+    
+    enum OptionServices {
+        case servicioGrua
+        case autoSocorro
+        case reparacionesCompletas
+        case tanqueVacio
+        case cambioLlantas
+        case cerrajeroAutomotriz
+        case reparacionLatoneria
+
+        var destinationView: AnyView {
+            switch self {
+            case .servicioGrua:
+                return AnyView(Text("servicioGrua"))
+            case .autoSocorro:
+                return AnyView(Text("autoSocorro"))
+            case .reparacionesCompletas:
+                return AnyView(Text("reparacionesCompletas"))
+            case .tanqueVacio:
+                return AnyView(Text("tanqueVacio"))
+            case .cambioLlantas:
+                return AnyView(Text("cambioLlantas"))
+            case .cerrajeroAutomotriz:
+                return AnyView(Text("cerrajeroAutomotriz"))
+            case .reparacionLatoneria:
+                return AnyView(Text("reparacionLatoneria"))
+            }
+        }
+    }
+}
+
 struct CobturasView: View {
+    @StateObject var serviceData = ServiceData()
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Mis asistencias")
@@ -22,32 +72,17 @@ struct CobturasView: View {
             
             
             VStack {
-                NavigationLink {
-                    
-                } label: {
-                    CoberturasOpciones(image: "car.fill", title: "Servicio de grua")
+                
+                ForEach(serviceData.servicesApp.prefix(3)) { serviceApp in
+                    NavigationLink {
+                        serviceApp.option.destinationView
+                    } label: {
+                        CoberturasOpciones(image: "\(serviceApp.imageName)", title: "\(serviceApp.title)")
+                    }
                 }
                 
-                Divider()
-                
                 NavigationLink {
-                    
-                } label: {
-                    CoberturasOpciones(image: "car.2", title: "AutoSocorro")
-                }
-                
-                
-                Divider()
-                
-                NavigationLink {
-                    
-                } label: {
-                    CoberturasOpciones(image: "wrench.and.screwdriver", title: "Reparaciones completas")
-                }
-               
-                
-                NavigationLink {
-                    
+                    AccionarServicio()
                 } label: {
                     HStack {
                         Text("Asistencias de su plan")
